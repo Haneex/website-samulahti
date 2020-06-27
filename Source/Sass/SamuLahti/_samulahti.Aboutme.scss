@@ -1,0 +1,44 @@
+.Aboutme
+{
+
+    // All sections on page should fill the page at least
+    // for a nice spaced out effect
+    > section, > header
+    {
+        // Fill the page at least
+        min-height: 40vh;
+    }
+
+    color: $color6;
+
+    // Add background image
+    > .background-briefcase
+    {
+    background-image: url("/Assets/Icons/briefcase-outline.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    }
+
+    // Add background image
+    > .samu-lahti
+    {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    background-image: url("/Assets/Images/Lahti_Samu.jpg");
+    }
+
+    // Add background image
+    > .samu-lahti-jump
+    {
+    height: 200vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/Assets/Images/SamuLahti_Jump.jpg");
+    }
+
+
+}

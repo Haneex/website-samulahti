@@ -1,0 +1,75 @@
+// All sections on home page should fill the page at least
+// for a nice spaced out effect
+.home > section, .home > header
+{
+    // Fill the page at least
+    min-height: 40vh;
+}
+
+
+.home
+{
+    // Color in bright main color
+    .my-name-is header > h1 
+    {
+        @extend h1.alternative;
+    }
+
+    // Button style
+    .list-button
+    {
+        // Display inline block
+        display: inline-block;
+
+        // Larger font
+        font-size: $font-large;
+
+        // On smaller screens...
+        @include media('below-lap')
+        {
+            // Larger font
+            font-size: $font-normal;
+        }
+
+        // Padding inside button
+        padding: $spacing-normal;
+
+        // Text color bright neutral
+        color: $color2;
+
+        // Hover effect
+        @include hocus()
+        {
+            // Bright secondary color
+            color: $color2;
+        }
+    }
+
+    // Add background image
+    > .background-person
+    {
+    background-image: url("/Assets/Icons/person-outline.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    }
+
+    // Add background image
+    > .background-briefcase
+    {
+    background-image: url("/Assets/Icons/briefcase-outline.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    }
+    
+    // Add background image
+    > .background-mail
+    {
+    background-image: url("/Assets/Icons/mail-outline.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    }
+
+}

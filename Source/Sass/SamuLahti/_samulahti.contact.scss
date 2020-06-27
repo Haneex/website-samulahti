@@ -1,0 +1,40 @@
+// All sections on contact page should fill the page at least
+// for a nice spaced out effect
+.contact > section, .contact > header
+{
+    // Fill the page at least
+    min-height: 50vh;
+}
+
+
+.contact
+{
+    // Set text color
+    color: $color6;
+
+    // Add background image
+    > .background-mail
+    {
+    background-image: url("/Assets/Icons/mail-outline.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    }
+
+    // Set linkedIn Icon for the website
+    .linkedin-icon
+    {
+        // Set color to white
+        color: white;
+
+        // Make icon show little bit bigger
+        font-size: $font-largest;
+
+        // Hover effect
+        @include hocus()
+        {
+            // Bright secondary color
+            color: $color2;
+        }
+    }
+}

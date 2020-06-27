@@ -1,0 +1,6 @@
+<!--@ output ..\ServerRoot\Views\_ViewStart.cshtml:server @-->
+@{
+
+    Layout = "_Layout";
+
+}

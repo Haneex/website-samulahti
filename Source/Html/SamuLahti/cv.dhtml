@@ -1,0 +1,27 @@
+<!--@ output cv @-->
+<!--@ output ..\ServerRoot\Views\Home\Cv.cshtml:server @-->
+<!--@ include variables @-->
+<!--@ include header:! @-->
+<!--@ include topmenu @-->
+
+<main class="cv">
+        <!-- Coming -->
+        <section class="start container single-vcenter">
+            <div class="grid-wrapper">
+                <div class="grid">
+                    <div class="col">
+                        <header>
+                            <p> I will update this part of my website later. </p>
+
+                            <p> In the meanwhile, you can check my profile in LinkedIn: </p>
+                            <a href="https://fi.linkedin.com/in/samulahti" class="ion-social-linkedin linkedin-icon"></a>
+                        </header>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</main>
+
+
+<!--@ include footer:! @-->

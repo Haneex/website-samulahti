@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "V0PMVlO1lH9XRo3iJPlMt8qogF5cU6gAGHkI9HfDZKtWyBK2t93o0J9mXsuAjOLaPTFMI3b/ZLULQSqhFqun6w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Samu Lahti\\OneDrive\\GitHub\\website-samulahti-updated\\ServerRoot\\ServerRoot.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Samu Lahti\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\3.1.5\\microsoft.netcore.app.runtime.win-x64.3.1.5.nupkg.sha512",
+    "C:\\Users\\Samu Lahti\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\3.1.5\\microsoft.windowsdesktop.app.runtime.win-x64.3.1.5.nupkg.sha512",
+    "C:\\Users\\Samu Lahti\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\3.1.5\\microsoft.aspnetcore.app.runtime.win-x64.3.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}

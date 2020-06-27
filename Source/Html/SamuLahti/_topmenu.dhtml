@@ -1,0 +1,28 @@
+<!-- Navigation Menu Bar for the website -->
+<nav class="Top-Navigation-Bar slide-in-down" data-scrolldown-class="reduced">
+
+    <!-- Contents -->
+    <div>
+        <!-- Signature -->
+        <a href="$$Urls.Home$$">
+            <img src="$$Images.SignatureWhite$$"/>
+        </a>
+
+        <!-- Hamburger menu -->
+        <div class="hamburger hamburger--collapse" hamburger-menu-active="">
+            <a href="#topmenu">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+            </a>
+        </div>
+
+        <!-- Navigation links on top menu -->
+        <ul data-topmenu-class="" data-scroll-into-view="slide-in-up-group">
+            <li><a href="$$Urls.AboutMe$$">About Me</a></li>
+            <li><a href="$$Urls.CV$$">CV</a></li>
+            <li><a href="$$Urls.Contact$$">Contact</a></li>
+            <p>Copyright © 2020 Samu Lahti</p>
+        </ul>
+    </div>
+</nav>

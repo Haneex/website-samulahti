@@ -1,0 +1,242 @@
+@import "Fabric/Settings/dna.fabric.settings";
+@import "Fabric/dna.fabric";
+@import "Hamburgers/hamburgers.scss";
+@import "SamuLahti/samulahti.home";
+@import "SamuLahti/samulahti.Aboutme";
+@import "SamuLahti/samulahti.contact";
+@import "SamuLahti/samulahti.cv";
+
+
+// Containers
+.container
+{
+
+    // Large padding on large screens
+    padding: #{$spacing-larger * 2} $spacing-large;
+    
+    // Smaller when screen gets smaller
+    @include media($breakpoint-mobile)
+    {
+        padding:  $spacing-normal $spacing-small;
+    }        
+}
+
+// Button style
+a.button
+{
+    // Display inline block
+    display: inline-block;
+
+    // Larger font
+    font-size: $font-large;
+
+    // On smaller screens...
+    @include media('below-lap')
+    {
+        // Larger font
+        font-size: $font-normal;
+    }
+
+    // Border
+    border: 1px solid $color2;
+
+    // Border radius
+    border-radius: 15px;
+
+    // Padding inside button
+    padding: $spacing-normal;
+
+    // Text color bright neutral
+    color: $color6;
+
+    // Hover effect
+    @include hocus()
+    {
+        // Bright secondary color
+        color: $color2;
+    }
+}
+
+// Sections in general
+section
+{
+    // Dark background color
+    background: $color1;
+
+    // The text inside header
+    header
+    {
+        // Works same space apart as the height of the text
+        line-height: 1;
+
+        // Center the text
+        text-align: center;
+
+        // Each line of text as a header
+        > h1
+        {
+            // Unusually large font
+            font-size: $font-largest;
+
+            // On smaller screens...
+            @include media('below-lap')
+            {
+                // Large font
+                font-size: $font-larger;
+            }
+        }
+
+        // Make all header paragraphs larger font
+        > p
+        {
+            // Larger font
+            font-size: $font-large;
+
+            // On smaller screens...
+            @include media('below-lap')
+            {
+                // Large font
+                font-size: $font-normal;
+            }
+        }
+    }    
+}
+
+section.footer
+{
+    // Some padding around footer
+    padding: $spacing-normal;     
+
+    // Remove padding from section style
+    p 
+    {
+        // Smaller font size
+        font-size: $font-normal;
+
+        // Remove section margin style
+        margin: 0; 
+    }
+}
+
+h1.alternative
+{
+    // Bright theme color
+    color: $color2;
+
+    // Mark inside here is bright neutral color
+    mark { color: $color6; }    
+}
+
+// Headers directly after headers
+h1 + h1
+{
+    // No top margin
+    // And negative to "remove" heading aboves margin
+    margin-top: -$spacing-large;
+}
+
+p
+{
+    // Larger spacing
+    line-height: 1.5;
+}
+
+.inline-whole-image
+{
+    // Decent size
+    height: 50vh;
+
+    // Max size
+    max-height: 500px;
+
+    @include media($breakpoint-below-laptop)
+    {
+        height: 40vw;
+    }
+
+    // Shrink to fit
+    background-size: contain;
+
+    // Don't repeat image
+    background-repeat: no-repeat;
+
+    // Keep him to the center
+    background-position: center;
+
+    // Bit of top/bottom margin
+    margin: $spacing-larger 0; 
+}
+
+.spaced-lines
+{
+    h1, p
+    {
+        // Huge margin
+        margin: $font-largest * 2 0;
+
+        // On smaller screens...
+        @include media('below-lap')
+        {
+            // Large margin
+            margin: $font-largest 0;
+        }
+    }
+}
+
+ul > li
+{
+    font-size: $font-large;
+    margin: $spacing-small 0;
+}
+
+.dark-header
+{
+
+    // Dark background color
+    background: $color1;
+
+    // Start scrolling page
+    .start-scrolling
+    {
+
+        // Dark background color
+        background: transparent;
+
+        // Set text center
+        display: block;
+        text-align: center;
+
+        // Remove the normal padding push-down to go past top menu
+        // as instead we vertically center this section
+        @include media($breakpoint-desktop)
+        {
+            padding-top: 0;
+        }
+        @include media($breakpoint-laptop)
+        {
+            padding-top: 0;
+        }
+
+        // Arrows to show that user needs to start by scrolling down
+        > .arrow span 
+        {
+            display: block;
+            margin: auto;
+            width: 30px;
+            height: 30px;
+            border-bottom: 3px solid $color2;
+            border-right: 3px solid $color2;
+            transform: rotate(45deg);
+            @extend .down-arrows;
+        }
+
+        // Paragraph text to inform user to scroll down
+        > p
+        {
+            // Font size
+            font-size: $font-normal;
+            
+        };
+    }
+}
+

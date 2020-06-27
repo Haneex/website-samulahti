@@ -1,0 +1,27 @@
+<!--@ output contact @-->
+<!--@ output ..\ServerRoot\Views\Home\Contact.cshtml:server @-->
+<!--@ include variables @-->
+<!--@ include header:! @-->
+<!--@ include topmenu @-->
+
+<main class="contact">   
+        <!-- Contact by email -->
+        <section class="container single-vcenter background-mail" >
+            <div class="site-width">
+                <div class="grid">
+                    <div class="col">
+                        <header>
+                            <!-- Be careful with <br>! ion-android-drafts-->
+                            <p>Easiest way to contact me is by email:<br>
+                                <a href="mailto:$$EmailAddress$$">$$EmailAddress$$</a>.</p><br>
+                                <p>If you feel that email is too complicated, you can also find me in LinkedIn:<br></p>
+                                <a href="https://fi.linkedin.com/in/samulahti" class="ion-social-linkedin linkedin-icon"></a>
+                        </header>
+                    </div>
+                </div>
+            </div>
+        </section>
+</main>
+
+
+<!--@ include footer:! @-->

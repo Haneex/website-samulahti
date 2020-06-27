@@ -1,0 +1,23 @@
+
+<!--$
+
+<Data>
+
+    <Variable Name="WebsiteTitle">Samu Lahti | Engineer and Developer</Variable>    
+
+    <Variable Name="Urls.Home">/</Variable>    
+    <Variable Name="Urls.AboutMe">/Aboutme</Variable>
+    <Variable Name="Urls.CV">/CV</Variable>
+    <Variable Name="Urls.Contact">/contact</Variable>
+
+    <Variable Name="Urls.Download.WorldSkills">/download/WorldSkills-Standard</Variable>
+
+    <Variable Name="Urls.External.GitHub">https://github.com/Haneex</Variable>  
+    <Variable Name="Urls.External.WorldSkills">https://worldskills.org/skills/id/146/</Variable>  
+    <Variable Name="EmailAddress">contact@samulahti.com</Variable>
+
+    <Variable Name="Images.SamuLahtiCV">/Assets/Images/Lahti_Samu.png</Variable>
+    <Variable Name="Images.SignatureWhite">/Assets/Images/Signature_White.png</Variable>
+</Data>
+
+$-->

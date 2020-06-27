@@ -1,0 +1,289 @@
+//
+//   Samu Lahti menu
+//
+//   Samu Lahti is a menu with the signature on left and
+//   menu items all to the center, and another area
+//   to the right for any right-aligned items
+//
+
+// Top navigation bar design
+.Top-Navigation-Bar
+{
+
+    // Extend top menu
+    @extend .top-menu;
+
+    // Smooth animations
+    transition: padding $transition-normal;
+
+    // Start off black background
+    background: $color1;
+
+    // Main bright foreground color
+    color: $color6;
+
+    // Fixed position
+    position: fixed;
+    top: 0;
+    
+    // Width 100% due to fixed removing it
+    width: 100%;
+
+    // Add top/bottom padding
+    padding: $top-menu-standard-padding 0px;
+
+    // Wrapper
+    >div
+    {
+        // Menu wraps to grid max width
+        @extend .grid-wrapper;
+
+        // Signature image
+        > a > img
+        {
+
+            // Reset button styles
+            border: 0;
+            border-radius: 0;
+
+            text-align: center;
+
+            // Transition
+            @extend .slide-in-down;
+
+            // Keep on top
+            z-index: 1000;
+
+            margin-left: 0;
+
+            // Set image size
+            height: $top-menu-standard-logo-height;
+            width: auto;
+
+            // When below laptop
+            @include media($breakpoint-below-laptop)
+            {
+                display: inline-block;
+                position: absolute;
+                left: 50%; // Move the element to the left by 50% of the container's width
+                transform: translateX(-50%); // Calculates 50% of the element's width and moves it by that amount across the X-axis to the left    
+            }
+        }
+
+        > .hamburger
+        {
+            // Transition smoothly
+            transition: padding $transition-normal;
+
+            // Keep on top
+            z-index: 1000;
+
+            float: right;
+
+            // Hide icon
+            @extend .hidden;            
+
+            // Alternative link color
+            > a 
+            {
+                // Smooth transitions
+                transition: transform $transition-normal;
+
+                // Bright general color
+                color: $color2;
+
+                // Inline block so its scalable
+                display: inline-block;
+
+                // When expanded go main bright color
+                // On hover go main bright color
+                &.expanded, &:hover 
+                {
+                    // Grow a bit
+                    transform-origin: 50% 50%;
+                    transform: scale(1.2, 1.2);
+                }
+            }
+
+            // When below laptop show
+            @extend .#{$breakpoint-below-laptop}-show-block;
+
+            // Grow when hover
+            transform: scale(0.75,0.75);
+
+            // Verticle middle to fix baseline position
+            vertical-align: middle;
+
+            // When below laptop
+            @include media($breakpoint-below-laptop)
+            {
+                float: right;
+            }
+        }
+
+        // Menu items
+        > ul
+        {
+            // Make horizontal menu
+            @extend .horizontal-menu;
+
+            // Align
+            vertical-align: top;            
+            display: inline-block;
+            position: absolute;
+            left: 50%; // Move the element to the left by 50% of the container's width
+            transform: translateX(-50%); // Calculates 50% of the element's width and moves it by that amount across the X-axis to the left
+
+            // When below laptop
+            @include media($breakpoint-below-laptop)
+            {
+
+                // Remove float
+                float: none;
+
+                // Make full width
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 75px;
+
+                // Make height fill page
+                // (height is relative to top navigation bar so is not that large
+                //  hance the reason for large value)
+                min-height: 2000%;
+
+                // Add background back in that we lost from position absolute
+                background: $color1;
+
+                // Hide off to the left by default
+                transform: translate(0, -200%);
+            }
+
+            // For each item
+            > li
+            {
+                // Display as list item
+                display: list-item;
+
+                // Float left
+                float: left;
+
+                // Hide below laptop
+                @include media ($breakpoint-below-laptop)
+                {
+                    float: none;
+                    text-align: center;
+                }
+            }
+
+            // Dont display copyright on homepage
+            > p
+            {
+                display: none;
+            }
+
+            // When expanded show all menu items
+            &.expanded
+            {
+                // Align text to the center
+                text-align: center;
+
+                // Make full width
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 75px;
+    
+                // Make height fill page
+                // (height is relative to top navigation bar so is not that large
+                //  hance the reason for large value)
+                min-height: 2000%;
+    
+                // Add background back in that we lost from position absolute
+                background: $color1;
+
+                // Slide in when expanded
+                transform: translate(0, 0%);
+
+                > p
+                {
+                    margin: 30%;
+                    display: list-item;
+                    text-align: center;
+                    vertical-align: bottom;
+                }
+            }
+        }
+    }
+
+        // When the menu reduces in size
+        &.reduced
+        {
+            // Reduce padding
+            > div > ul
+            {
+                // Transition slide-in smoothly
+                transition: transform $transition-normal;
+
+                // Hide menu when slided down
+                display: none;
+
+                // Hide off to the up by default
+                transform: translate(0, -200%);
+
+                // When menu has been opened
+                &.expanded
+                {
+                    // Make it visible again
+                    display: inline-block;
+                    
+                    margin-top: 15px;
+
+                    > li
+                    {
+                        // Display as list item
+                        display: list-item;
+
+                        // Make it full width
+                        width: 100%;
+
+                        // Make full width
+                        top: 75px;        
+                    }
+
+                    // Slide in when expanded
+                    transform: translate(0, 0%);
+
+                }
+            }
+
+            // Reduce hamburger size
+            > div > div
+            {
+                @extend .slide-in-down;
+
+                // When scrolled down show hambuger for navigation
+                display: inline-block;
+
+                // Align the hamburger
+                vertical-align: top;
+            }
+
+            > div > a > img
+            {
+                // Smooth transitions
+                transition: transform $transition-normal;
+
+                @extend .slide-in-down;
+
+                // Center the signature
+                display: inline-block;
+                position: absolute;
+                left: 50%; // Move the element to the left by 50% of the container's width
+                transform: translateX(-50%); // Calculates 50% of the element's width and moves it by that amount across the X-axis to the left    
+            
+                // RMake signature bigger
+                height: $top-menu-standard-logo-height * 1.25;
+            }
+        }
+    }

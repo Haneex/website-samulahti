@@ -1,0 +1,16 @@
+<!-- Footer -->
+<section class="footer single-vcenter">
+    <div class="grid-wrapper">
+        <div class="grid horizontal-center">
+            <div class="col one-quarter below-lap-one-third">
+                <header>
+                    <p>&copy; Samu Lahti 2020</p>
+                </header>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+
+</html>
