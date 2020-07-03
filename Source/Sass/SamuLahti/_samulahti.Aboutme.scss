@@ -14,30 +14,71 @@
     // Add background image
     > .background-briefcase
     {
-    background-image: url("/Assets/Icons/briefcase-outline.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
+        background-image: url("/Assets/Icons/briefcase-outline.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
     }
 
-    // Add background image
+    // Add image
     > .samu-lahti
     {
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
-    background-image: url("/Assets/Images/Lahti_Samu.jpg");
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+        background-image: url("/Assets/Images/Lahti_Samu.jpg");
+
+        // On smaller screens...
+        @include media('below-lap')
+        {
+            // Larger font
+            height: 85vh;
+        }
+    }
+
+    // Add image
+    > .samu-lahti-jump
+    {
+        height: 170vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url("/Assets/Images/SamuLahti_Jump.jpg");
+
+        // On smaller screens...
+        @include media('below-lap')
+        {
+            // Larger font
+            height: 90vh;
+        }
     }
 
     // Add background image
-    > .samu-lahti-jump
+    > .background-happy
     {
-    height: 200vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url("/Assets/Images/SamuLahti_Jump.jpg");
+        background-image: url("/Assets/Icons/happy-outline.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+    }
+
+    // Add background image
+    > .background-hammer
+    {
+        background-image: url("/Assets/Icons/hammer-outline.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+    }
+
+    // Add background image
+    > .background-medal
+    {
+        background-image: url("/Assets/Icons/medal-outline.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
     }
 
 

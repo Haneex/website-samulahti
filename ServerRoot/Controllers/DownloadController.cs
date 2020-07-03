@@ -6,8 +6,8 @@ namespace ServerRoot
 
     public class DownloadController : Controller
     {
-        // [Route("/download/"YOURFILENAME"")]
-        //  public IActionResult Index => File (/Assets/Files/"YOURFILENAME.zip", application/x-zip-compressed, "YOURFILENAME.zip");
+        [Route("/download/WorldSkills-Standard")]
+        public IActionResult DownloadWorldSkills() => File ("/Assets/Files/WSC2019_WSSS19_Industrial_Control-1.pdf", "application/pdf", "WSC2019_WSSS19_Industrial_Control-1.pdf");
 
     }
 }
