@@ -3,7 +3,7 @@
 .cv > section, .cv > header
 {
     // Fill the page at least
-    min-height: 50vh;
+    min-height: 45vh;
 }
 
 
@@ -37,4 +37,21 @@
         }
     }
 
+    // Add background image
+    > .background-construct
+    {
+    background-image: url("/Assets/Icons/construct-outline.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    }
+
+    // Add background image
+    > .background-code
+    {
+    background-image: url("/Assets/Icons/code-outline.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    }
 }

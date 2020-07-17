@@ -33,7 +33,10 @@
         @include media('below-lap')
         {
             // Larger font
-            height: 85vh;
+            height: 90vh;
+
+            // Set Image to cover whole screen since it looks better on mobile
+            background-size: cover;
         }
     }
 
